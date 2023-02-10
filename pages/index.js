@@ -17,13 +17,13 @@ export default function Home({ story }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>{story.name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
+      {/* <header>
         <h1>{story ? story.name : "My Site"}</h1>
-      </header>
+      </header> */}
       {/* TIPS:
        * StoryblokComponent renderar ut de blok ni lagt på Home sidan
        */}
