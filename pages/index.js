@@ -7,6 +7,10 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
+/* TIPS:
+ * Den här komponenten renderar ut Home
+ */
+
 export default function Home({ story }) {
   story = useStoryblokState(story);
 
@@ -20,7 +24,9 @@ export default function Home({ story }) {
       <header>
         <h1>{story ? story.name : "My Site"}</h1>
       </header>
-
+      {/* TIPS:
+       * StoryblokComponent renderar ut de blok ni lagt på Home sidan
+       */}
       <StoryblokComponent blok={story.content} />
     </div>
   );

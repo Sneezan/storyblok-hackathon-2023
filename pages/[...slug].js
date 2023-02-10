@@ -7,6 +7,11 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
+/* TIPS:
+ * Alla era sidor förutom Home renderas genom den här komponenten,
+ * så skriver ni någon kod här så dyker det upp på samtliga sidor
+ */
+
 export default function Page({ story }) {
   story = useStoryblokState(story);
 
@@ -20,7 +25,8 @@ export default function Page({ story }) {
       <header>
         <h1>{story ? story.name : "My Site"}</h1>
       </header>
-
+      {/* TIPS:
+       * StoryblokComponent renderar ut de blok ni lagt på respektive page i Storyblok */}
       <StoryblokComponent blok={story.content} />
     </div>
   );

@@ -5,15 +5,19 @@ import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Teaser from "../components/Teaser";
 
+/* TIPS:
+ * Här kopplar du ihop komponenter från din kod med storybloks blok
+ */
 const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
   page: Page,
+  // storybloks-komponent-namn: kod-komponent-namn
 };
 
 storyblokInit({
-  accessToken: "your-preview-token",
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN, // Din preview token
   use: [apiPlugin],
   components,
 });
